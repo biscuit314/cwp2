@@ -1,12 +1,5 @@
 version: 2
 
-
-deploy:
-  dockerhub:
-    branch: master
-    commands: 
-      - $DOCKER_HUB_TRIGGER
-
 jobs:
   build:
     working_directory: /temp
@@ -21,3 +14,8 @@ jobs:
       - run: dotnet restore
       - run: dotnet build
 
+  deploy:
+    dockerhub:
+      branch: master
+      commands: 
+        - $DOCKER_HUB_TRIGGER
