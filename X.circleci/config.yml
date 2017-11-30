@@ -13,4 +13,11 @@ jobs:
       - checkout
       - run: dotnet restore
       - run: dotnet build
+      
+  test:
+    steps:
+      - run: dotnet test # should fail, and therefore should not trigger
+      
+  deploy:
+    steps:
       - $DOCKER_HUB_TRIGGER
