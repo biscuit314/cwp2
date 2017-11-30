@@ -13,9 +13,4 @@ jobs:
       - checkout
       - run: dotnet restore
       - run: dotnet build
-
-  deploy:
-    dockerhub:
-      branch: master
-    steps: 
       - $DOCKER_HUB_TRIGGER
