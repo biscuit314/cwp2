@@ -17,5 +17,5 @@ jobs:
   deploy:
     dockerhub:
       branch: master
-      steps: 
-        - $DOCKER_HUB_TRIGGER
+    steps: 
+      - $DOCKER_HUB_TRIGGER
